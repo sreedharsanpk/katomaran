@@ -8,7 +8,7 @@ services:
       - "3000:3000"
     environment:
       DATABASE_URL: postgresql://webhook:webhook@postgres:5432/webhookdb
-      GITHUB_SECRET: supersecret
+      GITHUB_WEBHOOK_SECRET: supersecret
     depends_on:
       - postgres
 
