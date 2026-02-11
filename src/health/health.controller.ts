@@ -15,7 +15,6 @@ export class HealthController {
     return this.health.check([
       async () => {
         await this.prisma.$queryRaw`SELECT 1`;
-        
         return { database: { status: 'up' } }; 
       },
     ]);
